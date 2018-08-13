@@ -16,7 +16,7 @@ public class CommonOrderMapper {
             commonOrder = new CommonOrder();
         }
 
-        commonOrder.setOrderId(jsonObject.getJSONObject("_id").getString("$oid"));
+        commonOrder.setOrderId(jsonObject.getString("orderNumber"));
         commonOrder.setOrderType(jsonObject.getString("type"));
 
         JSONObject coreOrder = getCoreProduct(jsonObject, commonOrder);
